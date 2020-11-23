@@ -16,7 +16,6 @@ $(function () {
             ,'密码必须6到12位，且不能出现空格'
           ],
           repwd:function (value) { 
-              console.log(value);
               let pwd = $('.regBox [name="password"]').val();
               if(value != pwd){
                   return "两次输入的密码不一致"
@@ -48,13 +47,11 @@ $(function () {
     $("#login_form").on("submit",function (e) { 
         e.preventDefault();
         
-        console.log($("#login_form").serialize());
         $.ajax({
             type:"POST",
             url:"/api/login",
             data:$(this).serialize(),
             success:function (res) { 
-                console.log(res);
                 if(res.status !== 0){
                     $("#login_form")[0].reset();
                     return layer.msg(res.message);

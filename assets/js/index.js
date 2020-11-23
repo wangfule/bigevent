@@ -33,10 +33,8 @@ $(function () {
 //  渲染用户头像
 
 function renderAvatar(user) { 
-    console.log(user);
     // 获取到用户的名字
     let uname = user.nickname ||user.username;
-    console.log(uname);
     $('#welcome').html("欢迎&nbsp;&nbsp;"+uname)
 
     // 判断用户有没有头像属性,如果有就渲染图片,没有就渲染文字头像
