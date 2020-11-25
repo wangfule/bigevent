@@ -37,7 +37,7 @@ $(function () {
         })
     }
 
-
+    getArtContent()
 
 
     // 根据id得到文章数据渲染到页面
